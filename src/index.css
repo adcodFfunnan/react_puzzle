@@ -218,36 +218,26 @@ input[type=number]::-webkit-inner-spin-button {
 
 
   
+  
+ 
+ 
   @media screen and (max-width:955px){
+      .Board{
+        width:100%;
+        height:500px;
+      }
+      #navbar .IconMenu{
+        display:block;
+    } 
       #UserSpace{
-          position: absolute;
-          right:0px;
+        position: absolute;
+        right:0px;
+          width:60%;
       }
       .UserSpaceHidden{
         max-height:0px; 
         visibility: hidden; 
     }
-      #navbar .IconMenu{
-          display:block;
-      }  
-}
-@media screen and (max-width:734px){
-    .Board{
-        
-        height:300px;
-    }
-
-}
- 
- 
-  @media screen and (max-width:720px){
-      .Board{
-        width:100%;
-        height:500px;
-      }
-      #UserSpace{
-          width:60%;
-      }
       .InputNumber{
         display: block;
       }
