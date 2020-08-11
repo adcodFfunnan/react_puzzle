@@ -1,0 +1,299 @@
+html, body {height:100%;}
+#root{
+    width:100%;
+    height:100%;
+    
+}
+.GameDiv{
+    position: relative;
+    margin:7px 0px 20px 0px;
+    
+    
+}
+
+.Board{
+    display: inline-block;
+    width:500px;
+    height:500px;
+    
+}
+
+
+.InputText{
+    margin:5px;
+    padding: 10px;
+    background-color: white;
+}
+input[type="text"]{
+    width:364px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color:#3d3d3d;
+}
+input[type="text"]:focus{
+    outline:none;
+}
+.InputNumber{
+    display: inline-block;
+    margin:5px;
+    padding: 10px;
+    background-color: white;
+   
+}
+.PlusButton, .MinusButton{
+    width:30px;
+    background-color:rgb(238, 87, 53);
+    color:#FFFFFF;
+    padding:2px 1px;
+    margin:0px 0px 0px 1px;
+    border:0.16em solid rgba(255,255,255,0);
+    text-align: center;
+    border-radius: 2px;
+}
+.MinusButton:hover, .PlusButton:hover{
+    background-color:rgb(230, 53, 14);
+    cursor: pointer;
+}
+.MinusButton:focus,.PlusButton:focus{
+    outline:none;
+}
+.InpNumLab{
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    font-size: 12px;
+    color:#666666;
+    line-height: 1.3;
+    padding-bottom: 2px; 
+}
+input[type="number"]{
+    width: 100px;
+    cursor: not-allowed;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color:#3d3d3d;
+    margin-right: 1px;
+}
+input[type=number]::-webkit-inner-spin-button {
+    display:none;
+} 
+
+.InputButton{
+    margin:5px;
+    padding: 10px;
+    background-color: white;
+    
+}
+
+.Button{
+    background-color: rgb(53, 204, 238);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color:#fff;
+    border:none;
+    padding:10px 8px;
+    margin-right:10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.Button:hover{
+    cursor:pointer;
+}
+.Button:focus{
+    outline:none;
+}
+.Buttonr{
+    background-color: rgb(53, 204, 238);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color:#fff;
+    border:none;
+    padding:10px 15px 10px 15px;
+    margin-right:10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.icon{
+    position: relative;
+    top:2px;
+    left:-7px;
+    width:12px;
+    height:12px;   
+}
+.Buttonr:focus .icon{
+    transform:rotate(360deg);
+    transition: transform 0.5s linear;
+}
+
+
+/*
+.Buttonr:focus .icon{
+    animation-name:rotate;
+    animation-duration:0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+}
+
+
+@keyframes rotate{
+0%{transform:rotate(0deg)}
+25%{transform:rotate(90deg)}
+50%{transform: rotate(180deg)}
+75%{transform: rotate(270deg)}
+100%{transform: rotate(360deg);}
+}
+*/
+
+.Buttonr:focus{
+    outline:none;
+}
+
+
+.img{
+    width: 100%;
+    height: 100%; 
+}
+.imgDiv{
+    opacity: 1;
+    display:inline-block;
+    height:100%;
+    position:relative;
+    outline-style:solid;
+    outline:2px solid hsl(0,0%,100%);
+    outline-offset: -2px;
+    transition: left 0.3s, top 0.3s;
+}
+#UserSpace{
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 0.1em;
+    padding: 3px;
+    margin:1px 1px 0px 15px;
+    transition: max-height 0.5s, visibility 0.5s;
+    background-color:whitesmoke;
+    overflow: hidden;
+}
+.UserSpace{
+    max-height:400px;
+    
+}
+.UserSpaceHidden{
+    max-height:400px; 
+   
+}
+#navbar{
+    background-color:rgb(238, 87, 53);
+    margin:0px 0px 5px 0px;
+    overflow:auto;
+    position: relative;
+}
+
+#navbar a{
+      background-color: teal;
+      padding:15px;
+      font-size: 20px;
+      color:white;
+      float:left;
+}
+#navbar .timeClock{
+    float:right;
+}
+#navbar .IconMenu{
+    float:right;
+    margin:0px;
+    display:none;
+}
+#navbar .IconMenu:hover{
+    cursor:pointer;
+}
+
+#CongratMessage{
+    background-color: teal;
+    margin:12px 0px 0px 0px;
+    padding: 10px;
+    font-size: 20px;
+    color:white;
+    display: inline;
+}
+
+
+
+  
+  @media screen and (max-width:955px){
+      #UserSpace{
+          position: absolute;
+          right:0px;
+      }
+      .UserSpaceHidden{
+        max-height:0px; 
+        visibility: hidden; 
+    }
+      #navbar .IconMenu{
+          display:block;
+      }  
+}
+@media screen and (max-width:734px){
+    .Board{
+        
+        height:300px;
+    }
+
+}
+ 
+ 
+  @media screen and (max-width:532px){
+      .Board{
+        width:100%;
+        height:500px;
+      }
+      #UserSpace{
+          width:60%;
+      }
+      .InputNumber{
+        display: block;
+      }
+      input[type="text"]{
+       width:96%;
+       right:4%;
+      }
+      input[type="number"]{
+         width:58%; 
+      }
+      
+    .InputNumber{
+        position: relative;
+        
+    }
+    .MinusButton{
+        position:absolute;
+        right:4%;
+        width:16%;
+    }
+    .PlusButton{
+        position: absolute;
+        right:21%;
+        width:16%;
+    }
+    
+    .Button,.Buttonr{
+        width:100%;
+        padding:10px;
+        margin:3px 0px 3px 0px;
+    }
+    .InputButton{
+        padding: 5px 10px 5px 10px;   
+    }   
+    
+#CongratMessage{
+    font-size: 10px;
+}
+   
+}
+
+
+#canvas{
+    display:none;
+}
+#sourceImage{
+    display:none;
+}
+
