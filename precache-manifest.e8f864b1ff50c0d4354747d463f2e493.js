@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb0d1d7268242f79bc5d76fe1576148d",
+    "revision": "01d184880d5854b1195edbee612ad3c4",
     "url": "/react_puzzle/index.html"
   },
   {
-    "revision": "3e319258dc12396e64f9",
-    "url": "/react_puzzle/static/css/main.b9fcea51.chunk.css"
+    "revision": "bb4835905d31ee3b58fc",
+    "url": "/react_puzzle/static/css/main.52901512.chunk.css"
   },
   {
     "revision": "2bc2a83a667ff7a31f6d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react_puzzle/static/js/2.ae336ef7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3e319258dc12396e64f9",
+    "revision": "bb4835905d31ee3b58fc",
     "url": "/react_puzzle/static/js/main.1aa1e406.chunk.js"
   },
   {
