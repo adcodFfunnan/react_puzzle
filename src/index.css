@@ -234,7 +234,7 @@ input[type=number]::-webkit-inner-spin-button {
 
  
  
-  @media screen and (max-width:734px){
+  @media screen and (max-width:800px){
       .Board{
         width:100%;
         height:500px;
