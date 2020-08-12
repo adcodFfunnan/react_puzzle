@@ -209,7 +209,9 @@ class Game extends React.Component{
            UserSpaceDiv:true /*IWantedToHandleUserSpaceDivOnClik*/,
            gameIsOver:false,
            GameIsStarted:false,
-           finalTime:"" /*message to add in text after game is solved */
+           finalTime:"", /*message to add in text after game is solved */
+           anObject:{}, /*because I dont want to calculate on every click width and height*/
+           imgDivDim:{}
 
         };
         this.imgDivRef=React.createRef();
@@ -229,25 +231,25 @@ class Game extends React.Component{
         const imgTracker=this.state.imgTracker; 
         const emptySquare=this.state.EmptySquare;
 
-        const anObject=this.CalcWidthHeight(
+        /*const anObject=this.CalcWidthHeight(
             this.state.numberOfRows,
-            this.state.numberOfColumns);
-        const imgDivDim=this.CalcImgDivDimens();
-        let columWidth=imgDivDim.width+"px";
+            this.state.numberOfColumns);*/
+        /*const imgDivDim=this.CalcImgDivDimens();*/
+        let columWidth=this.state.imgDivDim.width+"px";
 
 
         for(let i=0;i<imgTracker.length-2;i++){
             imgTracker[i].top=0;imgTracker[i].left=0;
             imgTracker[i].myStyle={
                 top:"0px",left:"0px",
-                width:anObject.columWidth,
+                width:this.state.anObject.columWidth,
                 
             };
         }
         imgTracker[imgTracker.length-2].top=0; 
-        imgTracker[imgTracker.length-2].left=imgDivDim.width;
+        imgTracker[imgTracker.length-2].left=this.state.imgDivDim.width;
         imgTracker[imgTracker.length-2].myStyle=
-        {top:"0px",left:imgDivDim.width+"px",width:anObject.columWidth};
+        {top:"0px",left:this.state.imgDivDim.width+"px",width:this.state.anObject.columWidth};
         imgTracker[imgTracker.length-2].row=this.state.numberOfRows;
         imgTracker[imgTracker.length-2].column=this.state.numberOfColumns;
         emptySquare.row=this.state.numberOfRows;
@@ -255,16 +257,16 @@ class Game extends React.Component{
 
         this.setState({imgTracker:imgTracker,
             EmptySquare:emptySquare,
-            styleForRows:{width:"100%",height:anObject.rowHeight}
+            styleForRows:{width:"100%",height:this.state.anObject.rowHeight}
         });
         document.getElementById("hacker").disabled=true;
     }
     CheckForXMoving(placeInArray){
        
-        const anObject=this.CalcWidthHeight(
+        /*const anObject=this.CalcWidthHeight(
             this.state.numberOfRows,
-            this.state.numberOfColumns);
-        const imgDivDim=this.CalcImgDivDimens();
+            this.state.numberOfColumns); */
+        /*const imgDivDim=this.CalcImgDivDimens(); */
         
         const imgTracker=this.state.imgTracker;
         const columnDifference=this.state.EmptySquare.column-
@@ -276,14 +278,14 @@ class Game extends React.Component{
         imgTracker[placeInArray].row==this.state.EmptySquare.row){
            
             imgTracker[placeInArray].left+=
-            columnDifference*imgDivDim.width;
+            columnDifference*this.state.imgDivDim.width;
             leftPosition=imgTracker[placeInArray].left+"px";
             topPosition=imgTracker[placeInArray].top+"px";
 
             imgTracker[placeInArray].myStyle={
                 left:leftPosition,
                 top:topPosition,
-                width:anObject.columWidth
+                width:this.state.anObject.columWidth
             };
             imgTracker[placeInArray].column+=columnDifference;    
 
@@ -300,10 +302,10 @@ class Game extends React.Component{
     }
 
     CheckForYMoving(placeInArray){
-        const anObject=this.CalcWidthHeight(
+       /* const anObject=this.CalcWidthHeight(
             this.state.numberOfRows,
-            this.state.numberOfColumns);
-        const imgDivDim=this.CalcImgDivDimens();
+            this.state.numberOfColumns); */
+        /*const imgDivDim=this.CalcImgDivDimens();*/
 
         const imgTracker=this.state.imgTracker;
         const rowDifference=this.state.EmptySquare.row-
@@ -315,13 +317,13 @@ class Game extends React.Component{
         imgTracker[placeInArray].column==this.state.EmptySquare.column){
            
             imgTracker[placeInArray].top+=
-            rowDifference*imgDivDim.height;
+            rowDifference*this.state.imgDivDim.height;
             topPosition=imgTracker[placeInArray].top+"px";
             leftPosition=imgTracker[placeInArray].left+"px";
             imgTracker[placeInArray].myStyle={
                 top:topPosition,
                 left:leftPosition,
-                width:anObject.columWidth};
+                width:this.state.anObject.columWidth};
             imgTracker[placeInArray].row+=rowDifference;    
 
             const emptySquare=this.state.EmptySquare;
@@ -339,9 +341,9 @@ class Game extends React.Component{
         const imgTracker=this.state.imgTracker;
         const emptySquare=this.state.EmptySquare;
 
-        const anObject=this.CalcWidthHeight(
+       /* const anObject=this.CalcWidthHeight(
             this.state.numberOfRows,
-            this.state.numberOfColumns);
+            this.state.numberOfColumns); */
 
         let gameIsOver=true;
         for(let i=0;i<imgTracker.length;i++){
@@ -355,7 +357,7 @@ class Game extends React.Component{
             emptySquare.column="";
             for(let i=0;i<imgTracker.length;i++){
                 imgTracker[i].myStyle={
-                    width:anObject.columWidth,
+                    width:this.state.anObject.columWidth,
                     outline:"2px solid hsl(0,0%,100%,0)",
                     transition:"outline 5s, opacity 5s"
                 }
@@ -416,11 +418,11 @@ class Game extends React.Component{
         } 
     }
     mixImages(){
-        const anObject=this.CalcWidthHeight(
+       /* const anObject=this.CalcWidthHeight(
             this.state.numberOfRows,
-            this.state.numberOfColumns);
+            this.state.numberOfColumns); */
         const imgDivDim=this.CalcImgDivDimens();
-        
+    
         const numberOfPieces=this.state.numberOfRows*
         this.state.numberOfColumns;
         const anArray=[];
@@ -463,7 +465,7 @@ class Game extends React.Component{
         topPosition=imgTracker[placeInArray_1].top+"px";
         leftPosition=imgTracker[placeInArray_1].left+"px";
         imgTracker[placeInArray_1].myStyle={
-            width:anObject.columWidth,
+            width:this.state.anObject.columWidth,
             top:topPosition,
             left:leftPosition
         }
@@ -473,7 +475,7 @@ class Game extends React.Component{
         topPosition=imgTracker[placeInArray_2].top+"px";
         leftPosition=imgTracker[placeInArray_2].left+"px";
         imgTracker[placeInArray_2].myStyle={
-            width:anObject.columWidth,
+            width:this.state.anObject.columWidth,
             top:topPosition,
             left:leftPosition
         }
@@ -483,14 +485,15 @@ class Game extends React.Component{
         emptySquare.column=this.state.numberOfColumns;
 
         imgTracker[imgTracker.length-1].myStyle=
-        {opacity:"0",width:anObject.columWidth,zIndex:"-1"};
+        {opacity:"0",width:this.state.anObject.columWidth,zIndex:"-1"};
 
             this.setState({
                 EmptySquare:emptySquare,
                 imgTracker:imgTracker,
                 styleForImg:{},
                 UserSpaceDiv:!this.state.UserSpaceDiv,
-                GameIsStarted:true
+                GameIsStarted:true,
+                imgDivDim:imgDivDim
             }); 
         
     document.removeEventListener("keydown",this.handleKeyboard); 
@@ -532,7 +535,9 @@ class Game extends React.Component{
                 row:"",
                 column:""},
             GameIsStarted:false,
-            gameIsOver:false
+            gameIsOver:false,
+            anObject:anObject
+            
         }); 
         document.getElementById("start").disabled=false;
         document.getElementById("hacker").disabled=true;
@@ -585,6 +590,7 @@ class Game extends React.Component{
     }
 
     CalcImgDivDimens(){
+      
         const imgDivDim={
             width:"",
             height:""
