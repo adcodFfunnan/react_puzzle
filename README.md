@@ -1,4 +1,4 @@
-<h2>GitHub Pages</h2>
+<h2>GitHub Page</h2>
 <a href="https://adcodffunnan.github.io/react_puzzle/">https://adcodffunnan.github.io/react_puzzle/</a><br/><br/>
 
 ![](demo/react_puzzle.gif)
@@ -12,15 +12,15 @@ This is a puzzle game built using React JS. The game provides the ability to ins
 <p>Clone the project into local</p>
 
 <pre>
-	<code class="language-bash">git clone https://github.com/adcodFfunnan/weim.git</code>
+	<code class="language-bash">git clone https://github.com/adcodFfunnan/react_puzzle.git</code>
 </pre>
 <p>next open your project folder</p>
 <pre>
-	<code class="language-bash">cd weim</code>
+	<code class="language-bash">cd react_puzzle</code>
 </pre>
-<p>and update your laravel version with composer.json</p>
+<p>next type</p>
 <pre>
-	<code class="language-bash">composer update</code>
+	<code class="language-bash">npm install<br/>npm start</code>
 </pre>
 
 
