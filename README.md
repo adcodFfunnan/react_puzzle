@@ -23,7 +23,7 @@ This is a puzzle game built using React JS. The game provides the ability to ins
 	<code class="language-bash">npm install</code>
 </pre>
 <pre>
-	<code class="language-bash">cd react_puzzle</code>
+	<code class="language-bash">npm start</code>
 </pre>
 
 <pre>
