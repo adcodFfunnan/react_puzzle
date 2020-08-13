@@ -1,5 +1,5 @@
 <h2>GitHub Pages</h2>
-<a href="https://adcodffunnan.github.io/react_puzzle/">https://adcodffunnan.github.io/react_puzzle/</a><br/>
+<a href="https://adcodffunnan.github.io/react_puzzle/">https://adcodffunnan.github.io/react_puzzle/</a><br/><br/>
 
 ![](demo/react_puzzle.gif)
 
