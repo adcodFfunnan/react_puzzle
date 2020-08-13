@@ -8,7 +8,7 @@
 This is a puzzle game built using React JS. The game provides the ability to insert the image you want to play with, and it is possible to determine the level of difficulty. It can be played on desktops and mobile devices.
 </p>
 
-<h2>Cloning and Running the Application in local</h2>
+<h2>Cloning and Running the Game in local</h2>
 <p>Clone the project into local</p>
 
 <pre>
