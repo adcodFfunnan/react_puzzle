@@ -21,7 +21,9 @@ This is a puzzle game built using React JS. The game provides the ability to ins
 <p>next type</p>
 <pre>
 	<code class="language-bash">npm install</code>
-    <code class="language-bash">npm install</code>
+</pre>
+<pre>
+	<code class="language-bash">cd react_puzzle</code>
 </pre>
 
 <pre>
