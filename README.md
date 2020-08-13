@@ -4,4 +4,4 @@
 
 
 
-<p>Hello friend</p>
+![Farmers Market Finder Demo](demo/react_puzzle.gif)
