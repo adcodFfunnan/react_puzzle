@@ -590,7 +590,7 @@ class Game extends React.Component{
     }
 
     CalcImgDivDimens(){
-      
+        
         const imgDivDim={
             width:"",
             height:""
